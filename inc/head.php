@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,3 +52,4 @@
         <strong>Hello Wilder !</strong>
     </div>
 </header>
+

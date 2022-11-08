@@ -1,5 +1,26 @@
-<?php require 'inc/data/products.php'; ?>
-<?php require 'inc/head.php'; ?>
+<?php 
+require 'inc/data/products.php'; 
+require 'inc/head.php'; 
+if (!isset($_SESSION ['cookies'])){
+    
+    $_SESSION['cookies']= array();
+}
+ 
+
+
+
+foreach ($catalog as $id =>$cookie){
+    if (!empty($_GET) && $id == $_GET['add_to_cart']){
+
+        array_push($_SESSION ['cookies'],$cookie['name']);
+
+    }
+
+
+}
+
+
+?>
 <section class="cookies container-fluid">
     <div class="row">
         <?php foreach ($catalog as $id => $cookie) { ?>
